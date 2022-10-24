@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.insurance_activity.InsuranceActivity">
+
+
+    <!-- Background container -->
+    <include layout="@layout/layout_background_second"/>
+
+
+    <!-- Main View Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <include
+            android:id="@+id/toolBarContainerInclude"
+            layout="@layout/layout_component_toolbar_userimage"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/container_insuranceImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/background_container_medicinedata"
+            android:layout_marginTop="-20dp"
+            >
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:text="Hi, Aesculapeus"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/userAgeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/userNameTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/userNameTextView"
+
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:text="42 Thn"
+                android:textSize="15sp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/pointer_asuransiAndaAdalah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+                android:text="Asuransi Anda Adalah :"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                />
+
+            <TextView
+                android:id="@+id/insuranceNameTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/pointer_asuransiAndaAdalah"
+
+                android:text="BPJS Kesehatan"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:background="@drawable/background_insurance_data_textview"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/pointer_nomorKartu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/insuranceNameTextBox"
+                android:text="No. Kartu :"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <TextView
+                android:id="@+id/insuranceCardNumberTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/pointer_nomorKartu"
+
+                android:text="3214587965123"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:background="@drawable/background_insurance_data_textview"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/pointer_faskesPertama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/insuranceCardNumberTextBox"
+                android:text="Faskes Pertama :"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <TextView
+                android:id="@+id/insuranceHealthCarePartnerTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/pointer_faskesPertama"
+
+                android:text="Klinik Aesculapeus Medika"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:background="@drawable/background_insurance_data_textview"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/pointer_statusKepesertaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/insuranceHealthCarePartnerTextBox"
+                android:text="Status Kepesertaan:"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <TextView
+                android:id="@+id/insuranceMembershipStatusTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/pointer_statusKepesertaan"
+
+                android:text="Aktif"
+                style="@style/CustomeStyle.Text.Bold.Black"
+                android:background="@drawable/background_insurance_data_textview"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:gravity="center_vertical"
+                />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- Custom Circle Image View -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_insuranceImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@id/toolBarContainerInclude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:background="@drawable/background_circularimage_medicinedetailpicture"
+            >
+
+           <ImageView
+               android:id="@+id/insuranceImageView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/dummy_bpjs_kesehatan"
+               android:layout_margin="35dp"
+               android:background="@color/transparent"
+               />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

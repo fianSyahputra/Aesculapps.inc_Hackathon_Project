@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    >
+
+    <TextView
+        android:id="@+id/medicineNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Omeprazole 20mg"
+        android:textSize="15sp"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/upDownArrowImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/medicineNameText"
+        app:layout_constraintBottom_toBottomOf="@id/medicineNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_black"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/medicineNameText"
+        android:orientation="vertical"
+        android:id="@+id/extendedDataContainer"
+        >
+
+        <TextView
+            android:id="@+id/pointer_terdapatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/medicineNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Terdapat: "
+            android:layout_marginStart="20dp"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_interactionList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/pointer_terdapatTextView"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            tools:listitem="@layout/recyclerviewitem_activityrecomendation_interactionlist"
+            tools:itemCount="3"
+            />
+
+        <TextView
+            android:id="@+id/pointer_favoriteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView_interactionList"
+            android:text="Beberapa obat yang sering dicari interaksinya dengan omeprazole :"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_listOfFavoriteSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/pointer_favoriteTextView"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/recyclerviewitem_activityrecomendation_favoritesearchlist"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

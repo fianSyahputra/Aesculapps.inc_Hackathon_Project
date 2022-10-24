@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/Aesculapps.Green" />
+        </shape>
+    </item>
+
+    <item
+
+        android:drawable="@drawable/background_circle_blue"
+        android:left="130dp"
+        android:right="-30dp"
+        android:top="-130dp"
+        android:bottom="230dp"
+        />
+
+    <item
+
+        android:drawable="@drawable/background_circle_blue"
+        android:left="-250dp"
+        android:right="300dp"
+        android:top="205dp"
+        android:bottom="-5dp"
+        />
+
+
+
+</layer-list>
